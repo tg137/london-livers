@@ -15,6 +15,12 @@ class TestDistanceCalculatorMethods(unittest.TestCase):
         # Assert that the two points are roughly a mile away from each other
         self.assertEqual(miles, 1, 1)
 
+    def test_kilometres_to_miles_conversion(self):
+        # Roughly a mile in kilometres
+        kilometres = 1.609347087886444
+        miles = distance_calculator._kilometres_to_miles(kilometres)
+        self.assertAlmostEqual(miles, 1)
+
 
 if __name__ == "__main__":
     unittest.main
