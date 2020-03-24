@@ -21,6 +21,16 @@ class TestDistanceCalculatorMethods(unittest.TestCase):
         miles = distance_calculator._kilometres_to_miles(kilometres)
         self.assertAlmostEqual(miles, 1)
 
+    def test_calculate_distance_to_london(self):
+        # A point in Leipzig, approximately 538 miles from London
+        latitude = 51.339810
+        longitude = 12.378256
+
+        miles = distance_calculator.calculate_distance_to_london(latitude, longitude)
+
+        # Asset that the two points are approximately 538 miles from each other
+        self.assertAlmostEqual(miles, 538, 1)
+
 
 if __name__ == "__main__":
     unittest.main
