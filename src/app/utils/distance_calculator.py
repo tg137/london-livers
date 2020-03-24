@@ -1,3 +1,11 @@
+"""
+The distance calculator module contains all of the methods needed to calculate
+the distance between a pair of latitude and longitude coordinates.
+It has a method for running the Haversine formula which determines the great-circle
+distance between two points on a sphere.
+Equations inspired by the Python implementation here: https://stackoverflow.com/a/19412565/6565341
+"""
+
 from math import sin, cos, sqrt, atan2, radians
 from app.utils.config import EARTH_RADIUS, KILOMETRES_TO_MILES_CONVERSION_FACTOR, LONDON_LONGITUDE, LONDON_LATITUDE
 
