@@ -1,3 +1,8 @@
+"""
+The main module which is responsible for running the REST API using the FastAPI module.
+It has a single endpoint to list the users either living or located within 50 miles of London.
+The user information is retrieved from an external API.
+"""
 import json
 import urllib
 
