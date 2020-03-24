@@ -1,3 +1,7 @@
+"""
+Tests for the distance calculator module
+"""
+
 import unittest
 from app.utils import distance_calculator
 

@@ -1,3 +1,8 @@
+"""
+Tests for the main module.
+Uses mocking to simulate calls and responses to the external API.
+"""
+
 import unittest
 import urllib
 from unittest.mock import Mock, patch
