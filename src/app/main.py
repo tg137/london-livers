@@ -2,10 +2,9 @@ import urllib
 
 from fastapi import FastAPI, HTTPException
 import requests
+from app.utils.config import BASE_URL
 
 app = FastAPI()
-
-BASE_URL = "https://bpdts-test-app.herokuapp.com"
 
 
 @app.get("/users-in-london")
