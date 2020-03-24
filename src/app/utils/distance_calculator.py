@@ -1,5 +1,5 @@
 from math import sin, cos, sqrt, atan2, radians
-from app.utils.config import EARTH_RADIUS, KILOMETRES_TO_MILES_CONVERSION_FACTOR
+from app.utils.config import EARTH_RADIUS, KILOMETRES_TO_MILES_CONVERSION_FACTOR, LONDON_LONGITUDE, LONDON_LATITUDE
 
 
 def calculate_distance(lat1: float, long1: float, lat2: float, long2: float) -> float:
@@ -23,6 +23,16 @@ def calculate_distance(lat1: float, long1: float, lat2: float, long2: float) -> 
 
     distance = _haversine_formula(dlat, lat1, lat2, dlong)
     return _kilometres_to_miles(distance)
+
+
+def calculate_distance_to_london(latitude: float, longitude: float) -> float:
+    """
+    Calculates the distance from a given coordinate point to the centre of London
+    :param latitude: The latitude of the given coordinate point
+    :param longitude: The longitude of the given coordinate point
+    :return distance: The distance between the point and London in miles
+    """
+    return calculate_distance(latitude, longitude, LONDON_LATITUDE, LONDON_LONGITUDE)
 
 
 def _haversine_formula(dlat: float, lat1: float, lat2: float, dlon: float) -> float:
