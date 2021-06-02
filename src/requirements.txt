@@ -9,6 +9,6 @@ requests==2.23.0
 responses==0.10.12
 six==1.14.0
 starlette==0.13.2
-urllib3==1.25.8
+urllib3==1.26.5
 uvicorn==0.11.3
 websockets==8.1
